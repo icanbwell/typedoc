@@ -1,4 +1,4 @@
-import { join, relative, resolve } from "path";
+import { join, relative, resolve, parse } from "path";
 import * as ts from "typescript";
 import * as FS from "fs";
 import * as Path from "path";
@@ -347,10 +347,7 @@ function getEntryPointsForPackages(
         if (packageEntryPoint === ignorePackage) {
             continue;
         }
-        const tsconfigFile = ts.findConfigFile(
-            packageEntryPoint,
-            ts.sys.fileExists
-        );
+        const tsconfigFile = findTsConfigFile(packageEntryPoint, typedocPackageConfig?.tsconfig);
         if (tsconfigFile === undefined) {
             logger.error(
                 `Could not determine tsconfig.json for source file ${packageEntryPoint} (it must be on an ancestor path)`
@@ -424,3 +421,18 @@ function getEntryPointsForPackages(
 
     return results;
 }
+
+function findTsConfigFile(
+    packageEntryPoint: string,
+    tsconfig: string | undefined
+) {
+    const { dir, base } = tsconfig
+        ? parse(tsconfig)
+        : { dir: undefined, base: undefined };
+    return ts.findConfigFile(
+        dir ? join(packageEntryPoint, dir) : packageEntryPoint,
+        ts.sys.fileExists,
+        base
+    );
+}
+

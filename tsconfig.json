@@ -36,7 +36,7 @@
         "jsxFactory": "JSX.createElement",
         "jsxFragmentFactory": "JSX.Fragment"
     },
-    "include": ["src"],
+    "include": ["src/lib"],
     "exclude": [
         "src/lib/output/themes/default/assets",
         "src/test/converter",

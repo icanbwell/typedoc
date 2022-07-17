@@ -1,5 +1,5 @@
 {
-  "name": "typedoc",
+  "name": "@icanbwell/typedoc",
   "description": "Create api documentation for TypeScript projects.",
   "version": "0.23.7",
   "homepage": "https://typedoc.org",
@@ -15,10 +15,7 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "git://github.com/TypeStrong/TypeDoc.git"
-  },
-  "bugs": {
-    "url": "https://github.com/TypeStrong/TypeDoc/issues"
+    "url": "git://github.com/icanbwell/typedoc.git"
   },
   "engines": {
     "node": ">= 14.14"
@@ -79,7 +76,7 @@
     "build:prod:tsc": "tsc --project . --sourceMap false",
     "lint": "eslint . && npm run prettier -- --check .",
     "prettier": "prettier --config .config/.prettierrc.json --ignore-path .config/.prettierignore",
-    "prepublishOnly": "node scripts/set_strict.js false && npm run build:prod && npm test",
+    "prepublishOnly": "node scripts/set_strict.js false && npm run build:prod",
     "postpublish": "node scripts/set_strict.js true"
   },
   "keywords": [
