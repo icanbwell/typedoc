@@ -1,6 +1,8 @@
 # TypeDoc
 
-Documentation generator for TypeScript projects.
+Documentation generator for TypeScript projects. 
+
+This is a fork of https://github.com/TypeStrong/typedoc.  It makes subpackage level tsconfig location configurable.  This is necessary for NX generated monorepos. The default tsconfig location for subpackages is /libs/<subpackage>/tsconfig.lib.json
 
 [![CI](https://github.com/TypeStrong/typedoc/workflows/CI/badge.svg)](https://github.com/TypeStrong/typedoc/actions)
 [![NPM Version](https://img.shields.io/npm/v/typedoc?color=33cd56&logo=npm)](https://www.npmjs.com/package/typedoc)
