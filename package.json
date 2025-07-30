@@ -41,7 +41,7 @@
     "c8": "^7.11.3",
     "esbuild": "^0.14.39",
     "eslint": "^8.16.0",
-    "mocha": "^9.2.1",
+    "mocha": "^11.7.1",
     "prettier": "2.6.2",
     "puppeteer": "^13.5.2",
     "reg-notify-github-plugin": "^0.11.1",
