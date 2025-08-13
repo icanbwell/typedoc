@@ -39,7 +39,7 @@
     "@typescript-eslint/parser": "^5.26.0",
     "@typestrong/fs-fixture-builder": "github:TypeStrong/fs-fixture-builder#b88cd06fe814614a0d924af9d10d04ff95a551de",
     "c8": "^7.11.3",
-    "esbuild": "^0.14.39",
+    "esbuild": "^0.25.0",
     "eslint": "^8.16.0",
     "mocha": "^9.2.1",
     "prettier": "2.6.2",
